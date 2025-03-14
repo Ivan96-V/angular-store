@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h3 class="text-warning">Listado de Productos</h3>
+
+    <div>
+        <button mat-fab extended class="btn btn-primary my-5" 
+        (click)="agregarProducto()">Agregar Producto</button>
+    </div>
+
+    <ul class="list-group w-50 mx-auto">
+        @for (llave of obtenerLlaves(); track llave) {
+            <app-producto [productos]="productos[llave]" [llave]="llave"/>
+        }
+    </ul>
+
+</div>
